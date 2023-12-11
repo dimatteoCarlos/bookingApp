@@ -1,0 +1,28 @@
+/* badges.css */
+
+.button-badge {
+  display: flex;
+  justify-content: space-between;
+  height: 1.5rem;
+  width: auto;
+
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border-radius: 1.25rem;
+  font-size: 0.7rem;
+  gap:0.5rem;
+
+  cursor: pointer;
+}
+
+.button-badge.active {
+  border: 1px solid white;
+  background-color: rgba(10, 89, 206, 0.5);
+  
+}
+
+.button-badge:hover {
+  background-color: rgba(10, 89, 206, 0.5);
+} 
+
+
