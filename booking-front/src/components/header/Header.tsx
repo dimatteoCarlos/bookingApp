@@ -61,14 +61,10 @@ function Header({ modeType }: HeaderPropType): JSX.Element {
             </>
           )}
         </div>
-        {/* fin header-container */}
-
-        {/* <div className='blanco' style={{ backgroundColor: 'white' }}></div> */}
+        {/* end of header-container */}
       </div>
     </>
   );
 }
 
-export default Header;
-
-//MINUTO 40
+export default Header

@@ -13,8 +13,6 @@ import { DateRange } from 'react-date-range';
 import ResultsItem from '../../components/resultsItem/ResultsItem';
 
 const ListOfHotels = (): JSX.Element => {
-
-
   const { date: fecha, destination, options: options } = useLocation().state;
 
   //--------------------
@@ -35,7 +33,7 @@ const ListOfHotels = (): JSX.Element => {
             <div className='title'>Search</div>
 
             <div className='list-item'>
-              <label htmlFor='detination'>Destination/property name:</label>
+              <label htmlFor='detination'>Destination/property/name:</label>
 
               <input
                 type='text'
@@ -59,21 +57,16 @@ const ListOfHotels = (): JSX.Element => {
               </span>
 
               {isOpenDate && (
-                <div className=" date-range"> 
-
-                <DateRange
-                  onChange={(item) => {
-                    setDate([item.selection]);
-                  }}
-                  minDate={new Date()}
-                  ranges={date}
-                />
-              </div> 
-              )
-              }
-
-
-
+                <div className=' date-range'>
+                  <DateRange
+                    onChange={(item) => {
+                      setDate([item.selection]);
+                    }}
+                    minDate={new Date()}
+                    ranges={date}
+                  />
+                </div>
+              )}
             </div>
 
             <div className='list-item options'>
@@ -151,4 +144,4 @@ const ListOfHotels = (): JSX.Element => {
 };
 
 export default ListOfHotels;
-//mintuo 40
+

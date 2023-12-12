@@ -1,4 +1,5 @@
 [NOTE!]
+//----------
 to run the app:
 
 cd bookingApp/booking-front
@@ -21,7 +22,11 @@ npm i --save @fortawesome/free-regular-svg-icons
 
 npm i react-router-dom
 
+.[DEPLOYED!]
+https://booking-ui-f338d.web.app/
+
 //-------------------------
+
 [IMPORTANT!]
 
 # React + TypeScript + Vite
