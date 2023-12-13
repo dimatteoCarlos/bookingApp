@@ -10,25 +10,12 @@ import DateRangeComp from './dateRange/DateRangeComp';
 
 import { Range } from 'react-date-range';
 
-import { format } from 'date-fns'; //, compareAsc
-
+import { format } from 'date-fns';
 import { useState } from 'react';
 import OptionsComp from './options/OptionsComp.tsx';
+import { OptionsType } from '../../types/types';
 import { useNavigate } from 'react-router-dom';
-
 //-------------------------
-export type DateType = {
-  startDate: Date;
-  endDate: Date;
-  key: string;
-};
-
-export type OptionsType = {
-  adults: number;
-  children: number;
-  rooms: number;
-};
-//-----------------
 
 const Search = () => {
   //date-range--------------

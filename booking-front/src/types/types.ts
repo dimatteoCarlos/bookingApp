@@ -5,7 +5,7 @@ export type headerItemType = {
   status: boolean;
 };
 
-export type ModeType = string | null;
+export type ModeType = string | null ;
 
 export type headerTitleType = {
   title: string;

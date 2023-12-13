@@ -1,17 +1,41 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home/Home';
 import ErrorPage from './pages/errorPage/ErrorPage';
+import DefaultLayout from './pages/defaultLayout/DefaultLayout';
 
 import ListOfHotels from './pages/listOfHotels/ListOfHotels';
 import DetailsOfHotel from './pages/detailsOfHotel/DetailsOfHotel';
 
+import { ModeType } from './types/types';
+
 function App(): JSX.Element {
   const router = createBrowserRouter([
-    //'perch'= {path, element, errorElement, children[]}
+    {
+      path: '/',
+      element: <DefaultLayout />,
 
-    { path: '/', element: <Home />, errorElement: <ErrorPage /> },
-    { path: '/hotels', element: <ListOfHotels /> },
-    { path: '/hotels/:hotel', element: <DetailsOfHotel /> },
+      errorElement: <ErrorPage />,
+
+      children: [
+        {
+          index: true,
+          element: <Home />,
+          id:"Home",
+          loader: (): ModeType => {
+            return null;
+          },
+        },
+        {
+          path: '/hotels',
+          element: <ListOfHotels />,
+          id:"ListOfHotels",
+          loader: (): ModeType => {
+            return 'list';
+          },
+        },
+        { path: '/hotels/:hotel', element: <DetailsOfHotel /> },
+      ],
+    },
   ]);
 
   return (
@@ -22,5 +46,3 @@ function App(): JSX.Element {
 }
 
 export default App;
-
-//time stamp: 1:18:55

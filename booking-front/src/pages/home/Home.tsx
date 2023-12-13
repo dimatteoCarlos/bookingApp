@@ -1,5 +1,4 @@
 import Header from '../../components/header/Header.tsx';
-import Navbar from '../../components/navbar/Navbar.tsx';
 import Presentation from '../../components/presentation/Presentation.tsx';
 import DetailedProperties from '../../components/detailedProperties/DetailedProperties.tsx';
 import ListProperties from '../../components/listProperties/ListProperties.tsx';
@@ -10,7 +9,6 @@ import './home.css';
 function Home(): JSX.Element {
   return (
     <>
-      <Navbar />
       <Header modeType={null} />
 
       <div className='home-container '>

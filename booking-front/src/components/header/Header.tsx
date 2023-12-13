@@ -27,12 +27,13 @@ const headerTitleData: headerTitleType = {
 
 import { ModeType } from '../../types/types';
 
-//----header title data
+//----prop type
 export type HeaderPropType = {
   modeType: ModeType;
 };
 //--------*****-----------------
 function Header({ modeType }: HeaderPropType): JSX.Element {
+  
   return (
     <>
       <div className='header'>

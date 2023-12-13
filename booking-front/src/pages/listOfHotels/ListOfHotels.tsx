@@ -2,30 +2,41 @@
 
 import './listOfHotels.css';
 import Header from '../../components/header/Header';
-import Navbar from '../../components/navbar/Navbar';
 
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+
+import { useLocation, useRouteLoaderData } from 'react-router-dom';
 
 import { format } from 'date-fns';
 
 import { DateRange } from 'react-date-range';
 import ResultsItem from '../../components/resultsItem/ResultsItem';
 
+import { ModeType } from '../../types/types';
+
 const ListOfHotels = (): JSX.Element => {
   const { date: fecha, destination, options: options } = useLocation().state;
 
   //--------------------
-
   const [date, setDate] = useState(fecha);
 
   //--------------
   const [isOpenDate, setIsOpenDate] = useState<boolean>(false);
 
+  //pruebas------------
+  const mode: ModeType = useRouteLoaderData('ListOfHotels');
+
+  console.log({ mode });
+  console.log(useLocation().pathname);
+
+  //pruebas------------
+
   return (
     <div>
-      <Navbar />
-      <Header modeType='list' />
+      {/* <Navbar /> */}
+
+      <Header modeType={mode} />
+      {/* <Header modeType='list' /> */}
 
       <div className='list-container'>
         <div className='list-wrapper'>
@@ -144,4 +155,3 @@ const ListOfHotels = (): JSX.Element => {
 };
 
 export default ListOfHotels;
-

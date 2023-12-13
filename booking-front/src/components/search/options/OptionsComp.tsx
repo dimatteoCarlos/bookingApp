@@ -1,6 +1,6 @@
 //OptionsComp.tsx
 import '../search.css';
-import { OptionsType } from '../Search.tsx';
+import { OptionsType } from '../../../types/types';
 
 type OptionsCompTypeProp = {
   options: OptionsType;
@@ -23,13 +23,7 @@ const OptionsComp = ({
 
   //----------------
 
-  function updateOptionCounter(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    keyName: LabelType,
-    operation: OpType
-  ): void {
-    console.log(e.target);
-
+  function updateOptionCounter(keyName: LabelType, operation: OpType): void {
     setOptions((prev) => ({
       ...prev,
       [keyName]: operation === 'sum' ? options[keyName]++ : options[keyName]--,
@@ -80,9 +74,7 @@ const OptionsComp = ({
             <button
               className='sub counter-button'
               disabled={isOptionDisableBtn(label, options[label], 'sub')}
-              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
-                updateOptionCounter(e, label, 'sub')
-              }
+              onClick={() => updateOptionCounter(label, 'sub')}
             >
               {' - '}
             </button>
@@ -92,9 +84,7 @@ const OptionsComp = ({
             <button
               className='sum counter-button'
               disabled={isOptionDisableBtn(label, options[label], 'sum')}
-              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
-                updateOptionCounter(e, label, 'sum')
-              }
+              onClick={() => updateOptionCounter(label, 'sum')}
             >
               {' + '}
             </button>
