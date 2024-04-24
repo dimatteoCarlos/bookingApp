@@ -71,7 +71,7 @@ const Search = () => {
             onChange={(e) => setDestination(e.target.value)}
           />
         </div>
-
+{/*  */}
         <div className='search-item date-search'>
           <div
             className='click-zone'

@@ -7,7 +7,7 @@ npm run dev
 
 //---------------------
 [TIP!]
-to install dependencies:
+install dependencies:
 
 npm install --save react-date-range
 
@@ -22,8 +22,23 @@ npm i --save @fortawesome/free-regular-svg-icons
 
 npm i react-router-dom
 
+-----------------------
+I used this site to convert svg to react jsx component: 
+https://www.svgviewer.dev/svg-to-react-native-jsx
+
 .[DEPLOYED!]
+You can view the ui deployed at:
+Firebase:
 https://booking-ui-f338d.web.app/
+
+gitHub-pages:
+
+
+
+
+
+
+
 
 //-------------------------
 

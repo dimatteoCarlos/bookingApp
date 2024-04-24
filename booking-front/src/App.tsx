@@ -20,7 +20,7 @@ function App(): JSX.Element {
         {
           index: true,
           element: <Home />,
-          id:"Home",
+          id: 'Home',
           loader: (): ModeType => {
             return null;
           },
@@ -28,7 +28,7 @@ function App(): JSX.Element {
         {
           path: '/hotels',
           element: <ListOfHotels />,
-          id:"ListOfHotels",
+          id: 'ListOfHotels',
           loader: (): ModeType => {
             return 'list';
           },

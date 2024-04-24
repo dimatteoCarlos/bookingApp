@@ -5,14 +5,12 @@ import Header from '../../components/header/Header';
 
 import { useState } from 'react';
 
-import { useLocation, useRouteLoaderData } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { format } from 'date-fns';
 
 import { DateRange } from 'react-date-range';
 import ResultsItem from '../../components/resultsItem/ResultsItem';
-
-import { ModeType } from '../../types/types';
 
 const ListOfHotels = (): JSX.Element => {
   const { date: fecha, destination, options: options } = useLocation().state;
@@ -23,20 +21,11 @@ const ListOfHotels = (): JSX.Element => {
   //--------------
   const [isOpenDate, setIsOpenDate] = useState<boolean>(false);
 
-  //pruebas------------
-  const mode: ModeType = useRouteLoaderData('ListOfHotels');
-
-  console.log({ mode });
-  console.log(useLocation().pathname);
-
-  //pruebas------------
-
   return (
     <div>
       {/* <Navbar /> */}
 
-      <Header modeType={mode} />
-      {/* <Header modeType='list' /> */}
+      <Header modeType='list' />
 
       <div className='list-container'>
         <div className='list-wrapper'>

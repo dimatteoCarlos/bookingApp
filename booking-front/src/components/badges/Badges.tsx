@@ -1,5 +1,5 @@
 //Badge.tsx
-
+//Parent: Header.tsx
 import './badges.css';
 
 import { headerItemType } from '../../types/types';

@@ -14,7 +14,7 @@
   width: 100%;
   max-width: var(--max-width, 1024px);
   margin-bottom: 6rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .header-container.list-mode {
@@ -41,7 +41,7 @@
   width: 100%;
   max-width: var(--max-width, 750px);
   border-radius: 0.25rem;
-  background-color: red;
+
 
 }
 

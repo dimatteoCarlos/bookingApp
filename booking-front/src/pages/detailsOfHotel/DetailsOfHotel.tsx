@@ -9,7 +9,6 @@ import FooterList from '../../components/footerList/FooterList';
 import EmailSignup from '../../components/emailSignup/EmailSignup';
 
 const DetailsOfHotel = () => {
-  
   return (
     <>
       <Header modeType={'list'} />

@@ -6,7 +6,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from 'react-date-range';
 import type { Range, RangeKeyDict } from 'react-date-range';
 
-type Props = {
+type PropsType = {
   setDate: React.Dispatch<React.SetStateAction<Range[] | undefined>>;
   date: Range[] | undefined;
 };
@@ -14,7 +14,7 @@ type Props = {
 const DateRangeComp = ({
   date: selectionRange,
   setDate,
-}: Props): JSX.Element => {
+}: PropsType): JSX.Element => {
   function onChangeHandler(item: RangeKeyDict): void {
     setDate([item.selection]);
   }
